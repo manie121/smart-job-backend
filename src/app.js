@@ -6,8 +6,8 @@ const { default: connectDB } = require('./Connection/connection');
 const app = express();
 require('./Connection/connection');
 
-const userRouter = require('./Router/userRouter');
-const jobRouter = require('./Router/JobRouter');
+const userRouter = require('./Router/userRouter.js');
+const jobRouter = require('./Router/JobRouter.js');
 const port = 4000;
 
 app.use(cors());
