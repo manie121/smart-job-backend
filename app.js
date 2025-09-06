@@ -1,14 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const path = require("path");
-const { default: connectDB } = require('./Connection/connection');
+const { default: connectDB } = require('./src/Connection/connection.js');
 
 const app = express();
-require('./Connection/connection');
+require('./src/Connection/connection.js');
 
-const userRouter = require('./Router/userRouter.js');
-const jobRouter = require('./Router/JobRouter.js');
-const port = 4000;
+const userRouter = require('./src/Router/UsersRouter.js')
+const jobRouter = require('./src/Router/JobRouter.js');
+const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json({ limit: "10mb" }));
